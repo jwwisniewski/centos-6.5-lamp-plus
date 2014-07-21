@@ -3,6 +3,8 @@ centos-6.5-lamp-plus
 
 A simple modification of the https://vagrantcloud.com/smallhadroncollider/centos-6.5-lamp vagrant box 
 
+A PHP 5.3/MySQL developer environment with virtual hosts for separate parallel projects.
+
 one time provisioning
 ---------------------
 * additional port forwarding, host: 80 to guest: 80
@@ -25,9 +27,10 @@ tools
 
 additional vhosts HOW-TO
 ------------------------
-1. create new project dir under the public directory, i.e. *public/myproj*
+1. create a new project dir under the public directory, i.e. *public/myproj*
 2. edit the *provision/httpd.conf.add.new.vhost* file by copying the contents of httpd.conf.append and replacing the lines 
   1. *DocumentRoot /vagrant/public* to *DocumentRoot /vagrant/public/myproj*
   2. *ServerName localhost* to *ServerName myproj.localhost*
-3. edit your **host's** hosts file and add the new *myproj.localhost* domain
+3. edit your **host's** *hosts file* and add the new *myproj.localhost* domain targeted to 127.0.0.1
 4. run *vagrant reload*
+5. have fun :)
