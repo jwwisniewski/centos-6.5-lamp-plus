@@ -21,4 +21,4 @@ provisioning done on every startup
 
 tools
 -----
-* phpMyAdmin is available via [link](http://localhost/phpMyAdmin)
+* phpMyAdmin is available via [localhost/phpMyAdmin](http://localhost/phpMyAdmin)
