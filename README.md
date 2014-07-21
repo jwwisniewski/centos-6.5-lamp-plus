@@ -22,3 +22,12 @@ provisioning done on every startup
 tools
 -----
 * phpMyAdmin is available via [localhost/phpMyAdmin](http://localhost/phpMyAdmin)
+
+additional vhosts HOW-TO
+------------------------
+1. create new project dir under the public directory, i.e. *public/myproj*
+2. edit the *provision/httpd.conf.add.new.vhost* file by copying the contents of httpd.conf.append and replacing the lines 
+2.1. *DocumentRoot /vagrant/public* to *DocumentRoot /vagrant/public/myproj*
+2.2. *ServerName localhost* to *ServerName myproj.localhost*
+3. edit your **host's** hosts file and add the new *myproj.localhost* domain
+4. run *vagrant reload*
