@@ -34,3 +34,7 @@ additional vhosts HOW-TO
 3. edit your **host's** *hosts file* and add the new *myproj.localhost* domain targeted to 127.0.0.1
 4. run *vagrant reload*
 5. have fun :)
+
+requirements
+------------
+the original box requires the virtualizastion turned on in BIOS
