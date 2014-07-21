@@ -18,12 +18,12 @@ sudo sed -i 's/Allow from 127\.0\.0\.1/Allow from 10\.0\.2\.2/g' /etc/httpd/conf
 #configure mysql pass for phpMyAdmin not accepting an empty password
 sudo mysqladmin -u root password root
 
-configure apache
+#configure apache
 sudo sed -i 's/"\/var\/www\/public"/"\/vagrant\/public"/g' /etc/httpd/conf/httpd.conf
 sudo sed -i 's/\#NameVirtualHost/NameVirtualHost/g' /etc/httpd/conf/httpd.conf
 sudo bash -c "cat /vagrant/provision/httpd.conf.append >> /etc/httpd/conf/httpd.conf"
 
-configure php
+#configure php
 sudo sed -i 's/session\.save_path = "\/var\/lib\/php\/session"/session\.save_path = "\/tmp"/g' /etc/php.ini
 sudo sed -i 's/display_errors = Off/display_errors = On/g' /etc/php.ini
 sudo sed -i 's/& ~E_NOTICE/\| E_STRICT/g' /etc/php.ini
